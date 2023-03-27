@@ -7,7 +7,8 @@ class AlertsController < ApplicationController
         type: alert.type,
         description: alert.description,
         origin: alert.origin,
-        tags: alert.tags.map(&:name)
+        tags: alert.tags.map(&:name),
+        created_at: alert.created_at_in_words
       }
     }
   end
