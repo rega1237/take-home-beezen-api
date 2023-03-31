@@ -5,7 +5,7 @@ class Alert < ApplicationRecord
   has_and_belongs_to_many :tags
 
   validates :type, presence: true
-  validates :type, inclusion: { in: ["Open Portal", "Closed Portal"], message: "Type only accepts Open Portal and Closed Portal as values" }
+  validates :type, inclusion: { in: ["Open Portal", "Close Portal"], message: "Type only accepts Open Portal and Close Portal as values" }
   validates :description, presence: true
   validates :origin, presence: true
 
